@@ -2,8 +2,6 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const CounterApp = ({ value }) => {
-    console.log('render');
-
     const [counter, setCounter] = useState(value);
 
     const incrementCounter = () => {
