@@ -20,7 +20,9 @@ describe('11-async-await', () => {
             */
             const resultFc = async () => await getImagen('notAnAPIKey');
 
-            return expect(resultFc).rejects.toThrow();
+            // replacing return for await, so it's clear
+            // that we're waiting a promise to resolve/reject
+            await expect(resultFc).rejects.toThrow();
         });
     });
 });
