@@ -6,22 +6,30 @@ import { FirstApp } from '../src/FirstApp';
 describe('<FirstApp />', () => {
     beforeEach(cleanup);
 
-    test('should match with the snapshot', () => {
-        const title = 'Hola soy Goku';
+    const title = 'Hola, soy Goku';
+    const subtitle = 'Soy un subtitulo';
 
+    test('should match with the snapshot', () => {
         const { container } = render(<FirstApp title={title} />);
+
+        // screen.debug();
 
         expect(container).toMatchSnapshot();
     });
 
     test('should show title inside h1 tag', () => {
-        const title = 'Hola soy Goku';
+        render(<FirstApp title={title} />);
 
-        const { container, getByText } = render(<FirstApp title={title} />);
+        expect(screen.getByRole('heading', { level: 1 }).innerHTML).toContain(
+            title
+        );
 
-        expect(getByText(title)).toBeTruthy();
+        expect(screen.getByTestId('test-title').innerHTML).toContain(title);
+    });
 
-        const h1 = container.querySelector('h1');
-        expect(h1.innerHTML).toContain(title);
+    test('should show subtitle passed by props', () => {
+        render(<FirstApp title={title} subtitle={subtitle} />);
+
+        expect(screen.getAllByText(subtitle).length).toBe(2);
     });
 });

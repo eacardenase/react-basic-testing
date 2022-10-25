@@ -13,7 +13,8 @@ FirstApp.defaultProps = {
 export function FirstApp({ title, subtitle, name }) {
     return (
         <>
-            <h1> {title} </h1>
+            <h1 data-testid="test-title"> {title} </h1>
+            <p>{subtitle}</p>
             <p>{subtitle}</p>
             <p>{name}</p>
         </>

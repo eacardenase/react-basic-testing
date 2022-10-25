@@ -2,11 +2,16 @@
 
 exports[`<FirstApp /> > should match with the snapshot 1`] = `
 <div>
-  <h1>
+  <h1
+    data-testid="test-title"
+  >
      
-    Hola soy Goku
+    Hola, soy Goku
      
   </h1>
+  <p>
+    I'm a software developer
+  </p>
   <p>
     I'm a software developer
   </p>
