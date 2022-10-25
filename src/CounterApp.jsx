@@ -19,7 +19,9 @@ const CounterApp = ({ value }) => {
             <h2> {counter} </h2>
 
             <button onClick={decrementCounter}>-1</button>
-            <button onClick={resetCounter}>Reset</button>
+            <button aria-label="btn-reset" onClick={resetCounter}>
+                Reset
+            </button>
             <button onClick={incrementCounter}>+1</button>
         </>
     );
