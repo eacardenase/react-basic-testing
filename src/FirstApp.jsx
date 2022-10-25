@@ -6,15 +6,16 @@ FirstApp.propTypes = {
 };
 
 FirstApp.defaultProps = {
-    subtitle: 'help',
+    subtitle: "I'm a software developer",
     // title: 'John Doe',
 };
 
-export function FirstApp({ title, subtitle }) {
+export function FirstApp({ title, subtitle, name }) {
     return (
         <>
-            <h1>Hola, soy {title}</h1>
-            <p>Send {subtitle}</p>
+            <h1> {title} </h1>
+            <p>{subtitle}</p>
+            <p>{name}</p>
         </>
     );
 }

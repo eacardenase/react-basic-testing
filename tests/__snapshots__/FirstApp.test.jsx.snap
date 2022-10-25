@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`<FirstApp /> > should match with the snapshot 1`] = `
+<div>
+  <h1>
+     
+    Hola soy Goku
+     
+  </h1>
+  <p>
+    I'm a software developer
+  </p>
+  <p />
+</div>
+`;
